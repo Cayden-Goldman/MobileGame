@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 7386761596240631845}
   - component: {fileID: 5768107983002750139}
   - component: {fileID: 7722155978566234812}
-  - component: {fileID: 2472580763300079986}
   - component: {fileID: 3410460952462444693}
-  - component: {fileID: 3541237098347204612}
   - component: {fileID: 6566930408487655531}
   - component: {fileID: 6156896228320473396}
   - component: {fileID: 7019430146495461310}
@@ -85,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -7800735345802807839, guid: 5cd08eef0f4c5fe4f9cc6c4478a4a012, type: 3}
+  m_Color: {r: 0.11816931, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2032725576
+  GlobalObjectIdHash: 3016454472
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -121,21 +119,6 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &2472580763300079986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301623369295172808}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f9f64476b283c440a551521db3838d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
-  Position:
-    m_InternalValue: {x: 0, y: 0, z: 0}
 --- !u!114 &3410460952462444693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,19 +155,6 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 1
---- !u!114 &3541237098347204612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301623369295172808}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496db0e47bea28e44a32a9f6f6e46fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTopMostFoldoutHeaderGroup: 1
 --- !u!50 &6566930408487655531
 Rigidbody2D:
   serializedVersion: 5

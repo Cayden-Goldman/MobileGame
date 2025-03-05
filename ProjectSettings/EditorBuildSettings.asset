@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Braden/buh.unity
     guid: ba96b23e6343613478ccd08ea71e1058
+  - enabled: 1
+    path: Assets/Jaden/Scenes/buh3.unity
+    guid: bcf66c843ae67894385102d6b17d270c
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: cb25f5ffefb95844e8ec98034a10fe57, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

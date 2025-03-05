@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.OnScreen;
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rb2d;
+    public int movementSpeed;
     float horizontalMovement;
     void Start()
     {
@@ -16,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        rb2d.linearVelocity = new Vector2(horizontalMovement, rb2d.linearVelocity.y);
+        rb2d.linearVelocity = new Vector2(horizontalMovement * movementSpeed, rb2d.linearVelocity.y);
     }
 
     public void Move(InputAction.CallbackContext context)

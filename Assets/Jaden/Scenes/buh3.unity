@@ -991,6 +991,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2922422987117175154, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6515699769345417267, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1033,10 +1037,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097150573992035506, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374833656700702231, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
-      propertyPath: SlerpPosition
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

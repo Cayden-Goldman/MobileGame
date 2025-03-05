@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 637632998}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1560240350}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Pipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1033,6 +1033,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097150573992035506, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374833656700702231, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
+      propertyPath: SlerpPosition
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

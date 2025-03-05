@@ -20,8 +20,7 @@ public class NetManager : MonoBehaviour
         else
         {
             StatusLabels();
-
-            SubmitNewPosition();
+            //SubmitNewPosition();
         }
 
         GUILayout.EndArea();

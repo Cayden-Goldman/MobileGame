@@ -24,4 +24,10 @@ public class Movement : MonoBehaviour
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
     }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            rb2d.AddForceY(15);
+    }
 }

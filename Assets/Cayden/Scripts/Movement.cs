@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        rb2d.linearVelocity = new Vector2(horizontalMovement * movementSpeed, rb2d.linearVelocity.y);
+        rb2d.linearVelocityX = horizontalMovement * movementSpeed;
     }
 
     public void Move(InputAction.CallbackContext context)

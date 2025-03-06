@@ -1,9 +1,11 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class EnemyBackNForth : MonoBehaviour
+public class EnemyBackNForth : NetworkBehaviour
 {
     public float speed;
     Rigidbody2D rigidbody2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,7 +15,8 @@ public class EnemyBackNForth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody2.linearVelocityX = speed;
+        if (IsOwner)
+            rigidbody2.linearVelocityX = speed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -13,7 +13,7 @@ public class NetTransform : NetworkBehaviour
 
     void Update()
     {
-        if (IsOwner)
+        if (HasAuthority)
         {
             float theta = Time.frameCount / 10.0f;
             playerBody.position = new Vector3((float)Math.Cos(theta), 0.0f, (float)Math.Sin(theta));

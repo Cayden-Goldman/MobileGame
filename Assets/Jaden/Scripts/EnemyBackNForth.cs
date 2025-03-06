@@ -13,7 +13,7 @@ public class EnemyBackNForth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody2.linearVelocity = new Vector2(speed, rigidbody2.linearVelocityY);
+        rigidbody2.linearVelocityX = speed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

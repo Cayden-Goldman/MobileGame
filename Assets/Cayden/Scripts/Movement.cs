@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb2d;
     public int movementSpeed;
     float horizontalMovement;
+    public int jumpForce;
     void Start()
     {
 
@@ -28,6 +29,7 @@ public class Movement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.performed)
-            rb2d.AddForceY(15);
+            rb2d.AddForceY(jumpForce);
+        
     }
 }

@@ -265,6 +265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NetworkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 451643838192630419, guid: 179bb233118d57642a275c923a41303d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5024501896264494604, guid: 179bb233118d57642a275c923a41303d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -991,10 +995,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2922422987117175154, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6515699769345417267, guid: 7285e7fae3a28c34f90e14e659176578, type: 3}
       propertyPath: m_Name
       value: Enemy

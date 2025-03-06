@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.OnScreen;
+using Unity.Cinemachine;
 
 public class Movement : NetworkBehaviour
 {
@@ -12,7 +13,16 @@ public class Movement : NetworkBehaviour
     public int movementSpeed;
     float horizontalMovement;
     public int jumpForce;
+    GameObject cam;
 
+    private void Start()
+    {
+        if (IsOwner)
+        {
+            cam = GameObject.Find("CinemachineCamera");
+            cam.GetComponent<CinemachineCamera>().Follow = transform;
+        }
+    }
     void Update()
     {
         if (IsOwner)

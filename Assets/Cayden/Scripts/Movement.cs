@@ -14,6 +14,7 @@ public class Movement : NetworkBehaviour
     float horizontalMovement;
     public int jumpForce;
     GameObject cam;
+    public bool canJump = true;
 
     private void Start()
     {
@@ -37,7 +38,17 @@ public class Movement : NetworkBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && IsOwner)
+        if (context.performed && IsOwner && canJump)
+        {
             rb2d.AddForceY(jumpForce);
+            canJump = false;
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Enemy") && !canJump)
+        {
+            canJump = true;
+        }
     }
 }

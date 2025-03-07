@@ -19,6 +19,7 @@ public class Movement : NetworkBehaviour
     {
         if (IsOwner)
         {
+            GetComponent<PlayerInput>().enabled = true;
             cam = GameObject.Find("CinemachineCamera");
             cam.GetComponent<CinemachineCamera>().Follow = transform;
         }

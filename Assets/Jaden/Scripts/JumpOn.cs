@@ -1,27 +1,51 @@
 using System.Collections;
 using UnityEngine;
+using Unity.Netcode;
 
-public class JumpOn : MonoBehaviour
+public class JumpOn : NetworkBehaviour
 {
-    public bool destroying;
+    public float jumpOnVelocity = 10;
+
+    bool destroying;
     Rigidbody2D rb;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy") && !destroying)
+        if (!IsOwner) return;
+
+        if (collision.CompareTag("Enemy") && !destroying)
         {
-            StartCoroutine(DestroyWait(collision.gameObject));
+            NetworkObject netObject = collision.gameObject.GetComponent<NetworkObject>();
+
+            if (netObject)
+                StartCoroutine(DestroyWait(netObject));
         }
     }
-    private IEnumerator DestroyWait(GameObject destroy)
+
+    private IEnumerator DestroyWait(NetworkObject enemy) // network object serializes to a reference
     {
         destroying = true;
         yield return new WaitForSeconds(.1f);
-        Destroy(destroy);
-        rb.linearVelocityY = 5;
+        
+        rb.linearVelocityY = jumpOnVelocity;
+        HitEnemyRpc(enemy, NetworkObjectId);
+
+        yield return new WaitForSeconds(.25f);
         destroying = false;
+    }
+
+    // Network
+    [Rpc(SendTo.Server)]
+    void HitEnemyRpc(NetworkObjectReference enemyReference, ulong sourceNetworkObjectId)
+    {
+        NetworkObject enemy = enemyReference;
+
+        if (enemy != null)
+            Destroy(enemy.gameObject);
     }
 }

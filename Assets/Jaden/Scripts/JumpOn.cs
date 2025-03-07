@@ -46,6 +46,6 @@ public class JumpOn : NetworkBehaviour
         NetworkObject enemy = enemyReference;
 
         if (enemy != null)
-            Destroy(enemy.gameObject);
+            Destroy(enemy.gameObject); // only destroys on server for some reason
     }
 }

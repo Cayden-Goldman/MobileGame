@@ -326,6 +326,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 745345538602164185, guid: 179bb233118d57642a275c923a41303d, type: 3}
+      propertyPath: ConnectionData.ServerListenAddress
+      value: 0.0.0.0
+      objectReference: {fileID: 0}
     - target: {fileID: 5024501896264494604, guid: 179bb233118d57642a275c923a41303d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

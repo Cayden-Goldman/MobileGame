@@ -18,6 +18,8 @@ EditorBuildSettings:
     path: Assets/Cayden/buh2.unity
     guid: 91bacb4ef6757fc458b95114a2cf5d79
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 1cd8788966de30e44a217fa0731a0856, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c4c58fc4da8c8eb42b4d1131abfaec28, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: cb25f5ffefb95844e8ec98034a10fe57, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

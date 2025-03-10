@@ -7,12 +7,7 @@ public class JumpOn : NetworkBehaviour
     public float jumpOnVelocity = 10;
 
     bool destroying;
-    Rigidbody2D rb;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    public Rigidbody2D rb;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,8 +39,8 @@ public class JumpOn : NetworkBehaviour
     void HitEnemyRpc(NetworkObjectReference enemyReference, ulong sourceNetworkObjectId)
     {
         NetworkObject enemy = enemyReference;
-
+        
         if (enemy != null)
-            Destroy(enemy.gameObject); // only destroys on server for some reason
+            enemy.Despawn(true);
     }
 }

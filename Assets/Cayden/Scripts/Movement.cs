@@ -28,7 +28,14 @@ public class Movement : NetworkBehaviour
     void Update()
     {
         if (IsOwner)
+        {
             rb2d.linearVelocityX = horizontalMovement * movementSpeed;
+
+            if (horizontalMovement > 0)
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+            else if (horizontalMovement < 0)
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }   
     }
 
     public void Move(InputAction.CallbackContext context)

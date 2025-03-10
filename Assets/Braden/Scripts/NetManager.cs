@@ -17,29 +17,26 @@ public class NetManager : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.BeginArea(new Rect(10, 10, 300, 300));
+        GUILayout.BeginArea(new Rect(10, 10, 300, 600));
 
         if (!networkManager.IsClient && !networkManager.IsServer)
-        {
             StartButtons();
-        }
         else
-        {
             StatusLabels();
             //SubmitNewPosition();
-        }
 
         GUILayout.EndArea();
     }
 
     static void StartButtons()
     {
+        if (GUILayout.Button("Host")) networkManager.StartHost();
+        if (GUILayout.Button("Join (Enter IP)")) networkManager.StartClient();
+
         connectionIP = GUILayout.TextField(connectionIP);
         networkTransport.ConnectionData.Address = connectionIP;
 
-        if (GUILayout.Button("Host")) networkManager.StartHost();
-        if (GUILayout.Button("Client")) networkManager.StartClient();
-        if (GUILayout.Button("Server")) networkManager.StartServer();
+        //if (GUILayout.Button("Server")) networkManager.StartServer();
     }
 
     static void StatusLabels()
@@ -47,8 +44,8 @@ public class NetManager : MonoBehaviour
         var mode = networkManager.IsHost ?
             "Host" : networkManager.IsServer ? "Server" : "Client";
 
-        GUILayout.Label("Transport: " +
-            networkManager.NetworkConfig.NetworkTransport.GetType().Name);
+        /*GUILayout.Label("Transport: " +
+            networkManager.NetworkConfig.NetworkTransport.GetType().Name);*/
         GUILayout.Label("Mode: " + mode);
     }
 
